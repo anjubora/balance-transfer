@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/js/bootstrap.min.js" integrity="sha384-7aThvCh9TypR7fIc2HV4O/nFMVCBwyIUKL8XCtKE+8xgCgl/PQGuFsvShjr74PBp" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+            <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+            <center> <h1 class="p-3 mb-2 bg-info text-white">BALANCE TRANSFER</h1></center>
+            </div>
+            </div>
+            <form action="/invoke" method="POST">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <label class="input-group-text" for="inputGroupSelect01">select the sender</label>
+                </div>
+                <select class="custom-select" id="inputGroupSelect01" name="option1">
+                  <option selected>Choose...</option>
+                  <option >a</option>
+                  <option >b</option>
+                
+                </select>
+              </div>
+              <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <label class="input-group-text" for="inputGroupSelect01">Enter the token</label>
+                  </div>
+                  <input class="form-control form-control" type="text" name="token">
+                  
+               </div>
+
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <label class="input-group-text" for="inputGroupSelect01">select the receiver</label>
+                </div>
+                <select class="custom-select" id="inputGroupSelect01" name="option2">
+                  <option selected>Choose...</option>
+                  <option >a</option>
+                  <option >b</option>
+                
+                </select>
+                </div>
+
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <label class="input-group-text" for="inputGroupSelect01">Enter the amount</label>
+                    </div>
+                    <input class="form-control form-control" type="text" name="amount">
+                    
+                 </div>
+
+                 <center> <div>
+                <button type="submit" class="btn btn-primary  btn mb-2">Transfer</button>
+              </div></center>
+              </form>
+
+          
+              <div>
+                <div class="container">
+           <center>     <div class="row">
+    <div class="col-sm">
+        <a href="/query"><div class="col-auto" style="margin-top:30px;">
+            <button type="submit" class="btn btn-secondary btn mb-2">find value</button>
+            </div></a>
+    </div>
+    <div class="col-sm">
+        <a href="/query/gethistory"> <div class="col-auto" style="margin-top:30px;">
+            <button type="submit" class="btn btn-secondary btn  mb-2">get history</button>
+            </div></a>
+    </div>
+    </center>
+    
+  </div>
+</div>
+              <%console.log(result)
+              if(result!=undefined){%>
+
+           <center> <h3 style="color:blueviolet"><%=result%></h3></center>
+              <%}%>
+              <div>
+</div>
+
+</body>
+</html>
